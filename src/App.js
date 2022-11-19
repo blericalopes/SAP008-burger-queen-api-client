@@ -1,8 +1,14 @@
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import { Login } from "./pages/Login" 
+import { Signin } from "./pages/Signin";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Flash Burgers</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/signin" element={<Signin />} />
+    </Routes>
   );
 }
 
