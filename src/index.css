@@ -35,3 +35,18 @@ Button {
 hr {
   width: 200px;
 }
+
+#system-buttons {
+  height: 9vh;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+#system-buttons-orders {
+  display: flex;
+  justify-content: center;
+}
