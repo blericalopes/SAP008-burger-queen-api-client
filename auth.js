@@ -1,12 +1,10 @@
 export const login = async (email, password) => {
-  return await fetch("http://lab-api-bq.herokuapp.com/auth", {
+  return await fetch("https://lab-api-bq.onrender.com/auth", {
     method: "POST",
-    headers: {
-      "content-Type": "application/json; charset=UTF-8",
-    },
+    headers: { "content-Type": "application/json; charset=UTF-8", },
     body: JSON.stringify({
       email: email,
-      password: password
+      password: password,
     })
   }).then(res => res.json())
     .catch((error) => {
@@ -15,11 +13,9 @@ export const login = async (email, password) => {
 };
 
 export const signin = async (name, email, password, role) => {
-  return await fetch("http://lab-api-bq.herokuapp.com/users", {
+  return await fetch("https://lab-api-bq.onrender.com/users", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json", },
     body: JSON.stringify({ // pq não pode viajar via url em formato de obj
       name: name,
       email: email,
@@ -28,7 +24,9 @@ export const signin = async (name, email, password, role) => {
       restaurant: "Flash Burgers",
     }),
   }).then(res => res.json())
-      .catch((error) => {
-        alert(error);
-      });
+    .catch((error) => {
+      alert(error);
+    });
 };
+
+export const getToken = (() => localStorage.getItem("token")); 
