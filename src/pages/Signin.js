@@ -28,6 +28,7 @@ export function Signin() {
           localStorage.setItem("name", res.name);
           localStorage.setItem("email", res.email);
           localStorage.setItem("role", res.role);
+          localStorage.setItem("password", res.password);
           localStorage.setItem("token", res.token);
         }
       })

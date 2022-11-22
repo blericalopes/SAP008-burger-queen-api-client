@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState } from "react"
-import { menu } from "../api"
+import { myMenu } from "../api"
 
 export function Products() {
 
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    menu()
+    myMenu()
       .then((products) => setProducts(products))
   }, [])
 

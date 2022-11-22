@@ -11,11 +11,11 @@ export function System() {
 
   return (
     <>
-      <div className="system-buttons">
+      <div id="system-buttons">
         <Button text={"Café da manhã"} />
         <Button onClick={toOpen} text={'Cardápio dia todo'} />
       </div>
-      <div className="system-buttons-orders">
+      <div id="system-buttons-orders">
         <Button text={"Pedidos prontos"} />
       </div>
 
