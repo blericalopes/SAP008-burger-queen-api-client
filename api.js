@@ -30,7 +30,7 @@ export const signin = async (name, email, password, role) => {
     });
 };
 
-export const menu = async () => {
+export const myMenu = async () => {
   return await fetch("https://lab-api-bq.onrender.com/products", {
     method: "GET",
     headers: { "Content-Type": "application/json",

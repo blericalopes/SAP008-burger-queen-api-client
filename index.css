@@ -23,6 +23,10 @@ Button {
   cursor: pointer;
 }
 
+hr {
+  width: 200px;
+}
+
 .login-signin-container {
   height: 65vh;
   margin-top: 20vh;
@@ -32,9 +36,6 @@ Button {
   justify-content: space-evenly;
 }
 
-hr {
-  width: 200px;
-}
 
 .system-buttons {
   height: 9vh;
@@ -50,3 +51,4 @@ hr {
   display: flex;
   justify-content: center;
 }
+
