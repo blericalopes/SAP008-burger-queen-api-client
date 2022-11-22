@@ -1,7 +1,7 @@
 import Button from "../components/button"
 import Input from "../components/input"
 import { useNavigate } from "react-router-dom";
-import { signin } from "../auth";
+import { signin } from "../api";
 import { useState } from "react";
 
 export function Signin() {
@@ -35,7 +35,7 @@ export function Signin() {
 
   return (
     <>
-      <div id="login-signin-container">
+      <div className="login-signin-container">
         <Input placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)}></Input>
         <Input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></Input>
         <Input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)}></Input>
