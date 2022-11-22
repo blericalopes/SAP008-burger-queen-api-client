@@ -1,7 +1,7 @@
 import Button from "../components/button"
 import Input from "../components/input"
 import { useNavigate } from "react-router-dom";
-import { login } from "../auth";
+import { login } from "../api";
 import { useState } from "react";
 
 export function Login() {
@@ -36,7 +36,7 @@ export function Login() {
 
   return (
     <>
-      <div id="login-signin-container">
+      <div className="login-signin-container">
         <p>Não tem cadastro?</p>
         <Button onClick={toSignin} text={'Cadastre-se aqui!'} />
         <hr></hr>

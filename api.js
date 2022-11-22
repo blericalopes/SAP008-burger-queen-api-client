@@ -1,14 +1,15 @@
 export const login = async (email, password) => {
   return await fetch("https://lab-api-bq.onrender.com/auth", {
     method: "POST",
-    headers: { "content-Type": "application/json; charset=UTF-8", },
+    headers: { "content-Type": "application/json", },
     body: JSON.stringify({
       email: email,
       password: password,
     })
   }).then(res => res.json())
     .catch((error) => {
-      alert(error);
+      console.log(error)
+     
     });
 };
 
@@ -25,8 +26,18 @@ export const signin = async (name, email, password, role) => {
     }),
   }).then(res => res.json())
     .catch((error) => {
-      alert(error);
+      console.log(error);
     });
+};
+
+export const menu = async () => {
+  return await fetch("https://lab-api-bq.onrender.com/products", {
+    method: "GET",
+    headers: { "Content-Type": "application/json",
+    Authorization: getToken("token"),
+    },
+  }).then((res) => res.json())
+    .then((data) => { return data })
 };
 
 export const getToken = (() => localStorage.getItem("token")); 

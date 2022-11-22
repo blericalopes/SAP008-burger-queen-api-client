@@ -23,7 +23,7 @@ Button {
   cursor: pointer;
 }
 
-#login-signin-container {
+.login-signin-container {
   height: 65vh;
   margin-top: 20vh;
   display: flex;
@@ -36,7 +36,7 @@ hr {
   width: 200px;
 }
 
-#system-buttons {
+.system-buttons {
   height: 9vh;
   margin-top: 20vh;
   display: flex;
@@ -46,7 +46,7 @@ hr {
   margin-right: 35%;
 }
 
-#system-buttons-orders {
+.system-buttons-orders {
   display: flex;
   justify-content: center;
 }
