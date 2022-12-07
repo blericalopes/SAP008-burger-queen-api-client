@@ -34,8 +34,7 @@ export const myMenu = async () => {
   return await fetch("https://lab-api-bq.onrender.com/products", {
     method: "GET",
     headers: { "Content-Type": "application/json",
-    Authorization: getToken("token"),
-    },
+    Authorization: getToken("token"),},
   }).then((res) => res.json())
     .then((data) => { return data })
 };
