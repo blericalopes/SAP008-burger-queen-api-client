@@ -3,6 +3,9 @@ body {
   background-color: #26010b;
   font-family: 'Anton', sans-serif;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 Input {
@@ -21,6 +24,7 @@ Button {
   font-family: 'Anton', sans-serif;
   border-radius: 7px;
   cursor: pointer;
+  margin: 5px;
 }
 
 hr {
@@ -33,9 +37,28 @@ hr {
   color: #26010b;
   border-radius: 7px;
   margin-top: 30px;
-  width: 20vw;
-  display: flex;
-  justify-content: center;
+  display: none;
+}
+
+#second-menu {
+  background-color: #d9d9d9;
+  font-size: 12px;
+  color: #26010b;
+  border-radius: 7px;
+  margin-top: 30px;
+  display: none;
+}
+
+.close {
+  width: 52px;
+  height: 20px;
+  border: none;
+  background-color: #26010b;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'Anton', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .login-signin-container {
@@ -49,16 +72,21 @@ hr {
 
 
 .system-buttons {
-  height: 9vh;
+  height: 10vh;
   margin-top: 20vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-left: 35%;
-  margin-right: 35%;
 }
 
-.system-buttons-orders {
+.add-itens {
+  background-color: transparent;
+  border: #26010b solid 2px;
+  color: #26010b;
+  border-radius: 7px;
+  width: 207px;
+  height: 27px;
+  font-size: 12px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
