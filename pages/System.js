@@ -2,7 +2,7 @@
 import Button from "../components/button"
 import { useEffect, useState } from "react"
 import { myMenu } from "../api"
-
+import Menu from "../components/menu"
 
 export function System() {
 
@@ -31,40 +31,6 @@ export function System() {
     return console.log(product)
   }
 
-  function MenuAllDay() {
-    return (
-      products.map((product) => {
-        if (product.type.includes('all-day')) {
-          return (
-            <button onClick={() => getValue(product)} className="add-itens">
-              {product.name} -
-              {product.flavor} -
-              {product.complement} -
-              {product.price}
-            </button>
-          )
-        }
-      })
-    )
-  }
-
-  function MenuBreakfast() {
-
-    return (
-      products.map((product) => {
-        if (product.type.includes('breakfast')) {
-          return (
-            <button onClick={() => getValue(product)} className="add-itens">
-              {product.name} -
-              {product.price}
-            </button>
-          )
-        }
-      })
-    )
-  }
-
-
   return (
     <div>
       <div className="system-buttons">
@@ -73,10 +39,20 @@ export function System() {
         <Button text={"Pedidos prontos"} />
       </div>
       <div id="first-menu">
-        <span className="breakfast-list">{MenuBreakfast()} <button className="close" onClick={closeMenuBreakfast}>Fechar</button></span>
+        <span className="breakfast-list">
+          <Menu 
+            menuType='breakfast' 
+            productList={products} 
+            onMenuItemClick={getValue}/> 
+        <button className="close" onClick={closeMenuBreakfast}>Fechar</button></span>
       </div>
       <div id="second-menu">
-        <span className="all-day-list">{MenuAllDay()} <button className="close" onClick={closeMenuAllDay}>Fechar</button></span>
+        <span className="all-day-list">
+          <Menu 
+            menuType='all-day' 
+            productList={products} 
+            onMenuItemClick={getValue}/> 
+        <button className="close" onClick={closeMenuAllDay}>Fechar</button></span>
       </div>
     </div>
   )
