@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import Button from "../components/button"
 import { useEffect, useState } from "react"
 import { myMenu } from "../api"
