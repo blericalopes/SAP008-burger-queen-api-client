@@ -1,4 +1,5 @@
 {
+  "homepage": "https://blericalopes.github.io/SAP008-burger-queen-api-client/",
   "name": "demo-app",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d src"
   },
   "eslintConfig": {
     "extends": [
